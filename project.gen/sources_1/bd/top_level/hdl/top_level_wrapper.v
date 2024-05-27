@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-//Date        : Mon Apr 15 23:58:44 2024
+//Date        : Mon May 27 00:00:59 2024
 //Host        : simtool-5 running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_level_wrapper.bd
 //Design      : top_level_wrapper
@@ -10,7 +10,8 @@
 `timescale 1 ps / 1 ps
 
 module top_level_wrapper
-   (pcie_mgt_rxn,
+   (init_clk,
+    pcie_mgt_rxn,
     pcie_mgt_rxp,
     pcie_mgt_txn,
     pcie_mgt_txp,
@@ -29,7 +30,10 @@ module top_level_wrapper
     qsfp1_gt_grx_p,
     qsfp1_gt_gtx_n,
     qsfp1_gt_gtx_p,
-    qsfp1_up);
+    qsfp1_up,
+    qsfp_lp,
+    qsfp_rst_l);
+  input init_clk;
   input [15:0]pcie_mgt_rxn;
   input [15:0]pcie_mgt_rxp;
   output [15:0]pcie_mgt_txn;
@@ -50,7 +54,10 @@ module top_level_wrapper
   output [3:0]qsfp1_gt_gtx_n;
   output [3:0]qsfp1_gt_gtx_p;
   output qsfp1_up;
+  output [1:0]qsfp_lp;
+  output [1:0]qsfp_rst_l;
 
+  wire init_clk;
   wire [15:0]pcie_mgt_rxn;
   wire [15:0]pcie_mgt_rxp;
   wire [15:0]pcie_mgt_txn;
@@ -71,9 +78,12 @@ module top_level_wrapper
   wire [3:0]qsfp1_gt_gtx_n;
   wire [3:0]qsfp1_gt_gtx_p;
   wire qsfp1_up;
+  wire [1:0]qsfp_lp;
+  wire [1:0]qsfp_rst_l;
 
   top_level top_level_i
-       (.pcie_mgt_rxn(pcie_mgt_rxn),
+       (.init_clk(init_clk),
+        .pcie_mgt_rxn(pcie_mgt_rxn),
         .pcie_mgt_rxp(pcie_mgt_rxp),
         .pcie_mgt_txn(pcie_mgt_txn),
         .pcie_mgt_txp(pcie_mgt_txp),
@@ -92,5 +102,7 @@ module top_level_wrapper
         .qsfp1_gt_grx_p(qsfp1_gt_grx_p),
         .qsfp1_gt_gtx_n(qsfp1_gt_gtx_n),
         .qsfp1_gt_gtx_p(qsfp1_gt_gtx_p),
-        .qsfp1_up(qsfp1_up));
+        .qsfp1_up(qsfp1_up),
+        .qsfp_lp(qsfp_lp),
+        .qsfp_rst_l(qsfp_rst_l));
 endmodule
