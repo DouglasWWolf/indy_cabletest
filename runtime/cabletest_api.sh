@@ -1,19 +1,11 @@
 #==============================================================================
-#  Date      Vers  Who  Description
+#  Date       Vers  Who  Description
 # -----------------------------------------------------------------------------
-# 06-Dec-23  1.00  DWW  Initial Creation
+# 06-Dec-23  1.0.0  DWW  Initial Creation
+# 28-Feb-24  1.2.0  DWW  Now assuming the existence of /opt/fpga_runtime
 #==============================================================================
-CABLETEST_API_VERSION=1.00
+CABLETEST_API_VERSION=1.2.0
 
-
-#==============================================================================
-# This calls the local copy of pcireg
-#==============================================================================
-pcireg()
-{
-    ./pcireg $1 $2 $3 $4 $5 $6
-}
-#==============================================================================
 
 #==============================================================================
 # AXI register definitions
@@ -79,16 +71,16 @@ lower32()
 read_reg()
 {
     # Capture the value of the AXI register
-    text=$(pcireg $1)
+    pcireg -dec $1
 
     # Extract just the first word of that text
-    text=($text)
+    #$text=($text)
 
     # Convert the text into a number
-    value=$((text))
+    #value=$((text))
 
     # Hand the value to the caller
-    echo $value
+    #echo $value
 }
 #==============================================================================
 
@@ -128,20 +120,6 @@ is_bitstream_loaded()
 }
 #==============================================================================
 
-
-#==============================================================================
-# Loads the bitstream into the FPGA
-#
-# Returns 0 on success, non-zero on failure
-#==============================================================================
-load_bitstream()
-{
-    ./load_bitstream $1 $2 $3  1>&2
-    local rc=$?
-    rm -rf .Xil/vivado_lab*
-    return $rc
-}
-#==============================================================================
 
 
 #==============================================================================
