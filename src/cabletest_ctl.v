@@ -125,7 +125,7 @@ module cabletest_ctl # (parameter DEFAULT_TXPRE = 5'h00, CLK_HZ = 250000000)
    
     //==========================================================================
 
-    localparam DEFAULT_BYTES_PER_USEC = 12160;
+    localparam DEFAULT_BYTES_PER_USEC = 11000;
 
     //==========================================================================
     // We'll communicate with the AXI4-Lite Slave core with these signals.
