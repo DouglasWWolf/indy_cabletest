@@ -8,50 +8,54 @@
    "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
-preplace port AXIS_OUT_0 -pg 1 -lvl 4 -x 1260 -y 240 -defaultsOSRD
+preplace port AXIS_OUT_0 -pg 1 -lvl 4 -x 1300 -y 240 -defaultsOSRD
 preplace port AXIS_IN_0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
-preplace port AXIS_OUT_1 -pg 1 -lvl 4 -x 1260 -y 470 -defaultsOSRD
-preplace port AXIS_IN_1 -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
-preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
-preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
-preplace port port-id_eth0_up -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
-preplace port port-id_eth1_up -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
-preplace port port-id_resetn_out -pg 1 -lvl 4 -x 1260 -y 410 -defaultsOSRD
-preplace port port-id_RSFEC_ENABLE -pg 1 -lvl 4 -x 1260 -y 160 -defaultsOSRD
-preplace portBus CMAC_TXPRE -pg 1 -lvl 4 -x 1260 -y 180 -defaultsOSRD
-preplace inst channel_0 -pg 1 -lvl 2 -x 650 -y 60 -swap {0 1 2 3 4 5 6 7 8 9 10 11 18 16 17 14 15 13 12} -defaultsOSRD -pinDir AXIS_OUT right -pinY AXIS_OUT 180R -pinDir AXIS_IN left -pinY AXIS_IN 0L -pinDir clk left -pinY clk 180L -pinDir resetn left -pinY resetn 140L -pinBusDir CYCLES_PER_PACKET left -pinBusY CYCLES_PER_PACKET 160L -pinBusDir pg_control left -pinBusY pg_control 100L -pinBusDir PACKET_COUNT left -pinBusY PACKET_COUNT 120L -pinBusDir pg_status left -pinBusY pg_status 80L -pinBusDir pr_status left -pinBusY pr_status 60L
-preplace inst channel_1 -pg 1 -lvl 2 -x 650 -y 470 -swap {0 1 2 3 4 5 6 7 8 9 10 11 18 13 14 17 12 15 16} -defaultsOSRD -pinDir AXIS_OUT right -pinY AXIS_OUT 0R -pinDir AXIS_IN left -pinY AXIS_IN 60L -pinDir clk left -pinY clk 200L -pinDir resetn left -pinY resetn 100L -pinBusDir CYCLES_PER_PACKET left -pinBusY CYCLES_PER_PACKET 120L -pinBusDir control left -pinBusY control 180L -pinBusDir PACKET_COUNT left -pinBusY PACKET_COUNT 80L -pinBusDir pg_status left -pinBusY pg_status 140L -pinBusDir pr_status left -pinBusY pr_status 160L
-preplace inst rate_limiter_0 -pg 1 -lvl 3 -x 1060 -y 240 -swap {0 1 2 3 4 5 6 7 8 9 10 11 13 12 14} -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 0L -pinDir AXIS_OUT right -pinY AXIS_OUT 0R -pinDir clk left -pinY clk 70L -pinDir resetn left -pinY resetn 50L -pinBusDir BYTES_PER_USEC left -pinBusY BYTES_PER_USEC 110L
-preplace inst rate_limiter_1 -pg 1 -lvl 3 -x 1060 -y 470 -swap {0 1 2 3 4 5 6 7 8 9 10 11 13 12 14} -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 0L -pinDir AXIS_OUT right -pinY AXIS_OUT 0R -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 20L -pinBusDir BYTES_PER_USEC left -pinBusY BYTES_PER_USEC 60L
-preplace inst cabletest_ctl -pg 1 -lvl 1 -x 190 -y 120 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 24 33 23 31 22 32 29 25 30 28 26 27} -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 0L -pinDir clk left -pinY clk 290L -pinDir resetn left -pinY resetn 310L -pinDir eth0_up left -pinY eth0_up 330L -pinDir eth1_up left -pinY eth1_up 350L -pinBusDir pg_control_1 right -pinBusY pg_control_1 40R -pinBusDir pg_control_2 right -pinBusY pg_control_2 350R -pinBusDir pg_status_1 right -pinBusY pg_status_1 20R -pinBusDir pg_status_2 right -pinBusY pg_status_2 310R -pinBusDir pr_status_1 right -pinBusY pr_status_1 0R -pinBusDir pr_status_2 right -pinBusY pr_status_2 330R -pinBusDir CYCLES_PER_PACKET right -pinBusY CYCLES_PER_PACKET 270R -pinBusDir PACKET_COUNT right -pinBusY PACKET_COUNT 60R -pinBusDir BYTES_PER_USEC right -pinBusY BYTES_PER_USEC 290R -pinDir RSFEC_ENABLE right -pinY RSFEC_ENABLE 250R -pinBusDir CMAC_TXPRE right -pinBusY CMAC_TXPRE 210R -pinDir resetn_out right -pinY resetn_out 230R
-preplace netloc cabletest_ctl_BYTES_PER_USEC 1 1 2 N 410 860
-preplace netloc cabletest_ctl_CMAC_TXPRE 1 1 3 N 330 860J 180 NJ
-preplace netloc cabletest_ctl_CYCLES_PER_PACKET 1 1 1 480 220n
-preplace netloc cabletest_ctl_PACKET_COUNT 1 1 1 440 180n
-preplace netloc cabletest_ctl_RSFEC_ENABLE 1 1 3 N 370 840J 160 NJ
+preplace port AXIS_OUT_1 -pg 1 -lvl 4 -x 1300 -y 420 -defaultsOSRD
+preplace port AXIS_IN_1 -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace port port-id_eth0_up -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port port-id_eth1_up -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace port port-id_resetn_out -pg 1 -lvl 4 -x 1300 -y 360 -defaultsOSRD
+preplace port port-id_RSFEC_ENABLE -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD -left
+preplace portBus CMAC_TXPRE -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD -left
+preplace portBus CMAC_TXPOST -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD -left
+preplace portBus CMAC_TXDIFF -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD -left
+preplace inst channel_0 -pg 1 -lvl 2 -x 710 -y 60 -swap {0 1 2 3 4 5 6 7 8 9 10 11 18 16 17 14 15 13 12} -defaultsOSRD -pinDir AXIS_OUT right -pinY AXIS_OUT 180R -pinDir AXIS_IN left -pinY AXIS_IN 0L -pinDir clk left -pinY clk 180L -pinDir resetn left -pinY resetn 140L -pinBusDir CYCLES_PER_PACKET left -pinBusY CYCLES_PER_PACKET 160L -pinBusDir pg_control left -pinBusY pg_control 100L -pinBusDir PACKET_COUNT left -pinBusY PACKET_COUNT 120L -pinBusDir pg_status left -pinBusY pg_status 80L -pinBusDir pr_status left -pinBusY pr_status 60L
+preplace inst channel_1 -pg 1 -lvl 2 -x 710 -y 420 -swap {0 1 2 3 4 5 6 7 8 9 10 11 18 13 14 16 12 15 17} -defaultsOSRD -pinDir AXIS_OUT right -pinY AXIS_OUT 0R -pinDir AXIS_IN left -pinY AXIS_IN 50L -pinDir clk left -pinY clk 190L -pinDir resetn left -pinY resetn 90L -pinBusDir CYCLES_PER_PACKET left -pinBusY CYCLES_PER_PACKET 110L -pinBusDir control left -pinBusY control 150L -pinBusDir PACKET_COUNT left -pinBusY PACKET_COUNT 70L -pinBusDir pg_status left -pinBusY pg_status 130L -pinBusDir pr_status left -pinBusY pr_status 170L
+preplace inst rate_limiter_0 -pg 1 -lvl 3 -x 1100 -y 240 -swap {0 1 2 3 4 5 6 7 8 9 10 11 13 12 14} -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 0L -pinDir AXIS_OUT right -pinY AXIS_OUT 0R -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 20L -pinBusDir BYTES_PER_USEC left -pinBusY BYTES_PER_USEC 60L
+preplace inst rate_limiter_1 -pg 1 -lvl 3 -x 1100 -y 420 -swap {0 1 2 3 4 5 6 7 8 9 10 11 13 12 14} -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 0L -pinDir AXIS_OUT right -pinY AXIS_OUT 0R -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 20L -pinBusDir BYTES_PER_USEC left -pinBusY BYTES_PER_USEC 60L
+preplace inst cabletest_ctl -pg 1 -lvl 1 -x 220 -y 120 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 31 32 33 34 24 30 23 29 22 35 28 25 27 18 20 21 19 26} -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 0L -pinDir clk left -pinY clk 230L -pinDir resetn left -pinY resetn 250L -pinDir eth0_up left -pinY eth0_up 270L -pinDir eth1_up left -pinY eth1_up 290L -pinBusDir pg_control_1 right -pinBusY pg_control_1 40R -pinBusDir pg_control_2 right -pinBusY pg_control_2 270R -pinBusDir pg_status_1 right -pinBusY pg_status_1 20R -pinBusDir pg_status_2 right -pinBusY pg_status_2 250R -pinBusDir pr_status_1 right -pinBusY pr_status_1 0R -pinBusDir pr_status_2 right -pinBusY pr_status_2 290R -pinBusDir CYCLES_PER_PACKET right -pinBusY CYCLES_PER_PACKET 230R -pinBusDir PACKET_COUNT right -pinBusY PACKET_COUNT 60R -pinBusDir BYTES_PER_USEC right -pinBusY BYTES_PER_USEC 210R -pinDir RSFEC_ENABLE left -pinY RSFEC_ENABLE 20L -pinBusDir CMAC_TXPRE left -pinBusY CMAC_TXPRE 60L -pinBusDir CMAC_TXPOST left -pinBusY CMAC_TXPOST 80L -pinBusDir CMAC_TXDIFF left -pinBusY CMAC_TXDIFF 40L -pinDir resetn_out right -pinY resetn_out 80R
+preplace netloc cabletest_ctl_BYTES_PER_USEC 1 1 2 N 330 920
+preplace netloc cabletest_ctl_CMAC_TXPRE 1 0 1 N 180
+preplace netloc cabletest_ctl_CYCLES_PER_PACKET 1 1 1 520 220n
+preplace netloc cabletest_ctl_PACKET_COUNT 1 1 1 540 180n
+preplace netloc cabletest_ctl_RSFEC_ENABLE 1 0 1 N 140
 preplace netloc cabletest_ctl_pg_control_1 1 1 1 N 160
-preplace netloc cabletest_ctl_resetn_out 1 1 3 460 290 880 410 NJ
+preplace netloc cabletest_ctl_resetn_out 1 1 3 500 290 880 360 NJ
 preplace netloc channel_0_status 1 1 1 N 140
 preplace netloc channel_0_status1 1 1 1 N 120
-preplace netloc channel_1_pg_status 1 1 1 400 430n
-preplace netloc channel_1_pr_status 1 1 1 380 450n
-preplace netloc cmac_cdc_user0_aligned 1 0 1 NJ 450
-preplace netloc cmac_cdc_user1_aligned 1 0 1 NJ 470
-preplace netloc control_1 1 1 1 360 470n
-preplace netloc source_200Mhz_clk 1 0 3 20 550 420 310 820
-preplace netloc source_200Mhz_resetn 1 0 1 NJ 430
+preplace netloc channel_1_pg_status 1 1 1 460 370n
+preplace netloc channel_1_pr_status 1 1 1 420 410n
+preplace netloc cmac_cdc_user0_aligned 1 0 1 NJ 390
+preplace netloc cmac_cdc_user1_aligned 1 0 1 NJ 410
+preplace netloc control_1 1 1 1 440 390n
+preplace netloc source_200Mhz_clk 1 0 3 20 490 480 310 900
+preplace netloc source_200Mhz_resetn 1 0 1 NJ 370
+preplace netloc cabletest_ctl_CMAC_TXPOST 1 0 1 N 200
+preplace netloc cabletest_ctl_CMAC_TXDIFF 1 0 1 N 160
 preplace netloc Conn2 1 0 2 NJ 60 NJ
-preplace netloc Conn4 1 0 2 NJ 530 NJ
+preplace netloc Conn4 1 0 2 NJ 470 NJ
 preplace netloc channel_0_AXIS_OUT 1 2 1 N 240
-preplace netloc channel_1_AXIS_OUT 1 2 1 N 470
+preplace netloc channel_1_AXIS_OUT 1 2 1 N 420
 preplace netloc rate_limiter_0_AXIS_OUT 1 3 1 NJ 240
-preplace netloc rate_limiter_1_AXIS_OUT 1 3 1 NJ 470
+preplace netloc rate_limiter_1_AXIS_OUT 1 3 1 NJ 420
 preplace netloc smartconnect_M00_AXI 1 0 1 NJ 120
-levelinfo -pg 1 0 190 650 1060 1260
-pagesize -pg 1 -db -bbox -sgen -120 0 1440 720
+levelinfo -pg 1 0 220 710 1100 1300
+pagesize -pg 1 -db -bbox -sgen -190 0 1440 660
 ",
-   "No Loops_ScaleFactor":"1.0",
-   "No Loops_TopLeft":"-221,47",
+   "No Loops_ScaleFactor":"0.737846",
+   "No Loops_TopLeft":"-188,-136",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port S_AXI -pg 1 -lvl 0 -x -50 -y 160 -defaultsOSRD
