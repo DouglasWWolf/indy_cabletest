@@ -42,8 +42,8 @@
         "cabletest_ctl": ""
       },
       "cmac_cdc": "",
-      "axi_revision": "",
-      "qsfp_pins": ""
+      "qsfp_pins": "",
+      "axi_revision": ""
     },
     "interface_ports": {
       "pcie_refclk": {
@@ -544,6 +544,12 @@
                 "vlnv_bus_definition": "xilinx.com:display_cmac_usplus:drp_ports_int:2.0",
                 "vlnv": "xilinx.com:display_cmac_usplus:drp_ports:2.0",
                 "port_maps": {
+                  "gt_txdiffctrl": {
+                    "physical_name": "gt_txdiffctrl",
+                    "direction": "O",
+                    "left": "19",
+                    "right": "0"
+                  },
                   "gt_txprecursor": {
                     "physical_name": "gt_txprecursor",
                     "direction": "O",
@@ -665,16 +671,16 @@
               "cmac_control_ex/ctl_tx"
             ]
           },
-          "cmac_control_ex_0_gt_trans_debug": {
-            "interface_ports": [
-              "cmac_control_ex/gt_trans_debug",
-              "cmac/gt_trans_debug"
-            ]
-          },
           "cmac_control_ex_0_rs_fec": {
             "interface_ports": [
               "cmac/rs_fec_in",
               "cmac_control_ex/rs_fec"
+            ]
+          },
+          "cmac_control_ex_gt_trans_debug": {
+            "interface_ports": [
+              "cmac_control_ex/gt_trans_debug",
+              "cmac/gt_trans_debug"
             ]
           },
           "cmac_stat_rx": {
@@ -1037,6 +1043,12 @@
                 "vlnv_bus_definition": "xilinx.com:display_cmac_usplus:drp_ports_int:2.0",
                 "vlnv": "xilinx.com:display_cmac_usplus:drp_ports:2.0",
                 "port_maps": {
+                  "gt_txdiffctrl": {
+                    "physical_name": "gt_txdiffctrl",
+                    "direction": "O",
+                    "left": "19",
+                    "right": "0"
+                  },
                   "gt_txprecursor": {
                     "physical_name": "gt_txprecursor",
                     "direction": "O",
@@ -1158,16 +1170,16 @@
               "cmac_control_ex/ctl_tx"
             ]
           },
-          "cmac_control_ex_0_gt_trans_debug": {
-            "interface_ports": [
-              "cmac/gt_trans_debug",
-              "cmac_control_ex/gt_trans_debug"
-            ]
-          },
           "cmac_control_ex_0_rs_fec": {
             "interface_ports": [
               "cmac/rs_fec_in",
               "cmac_control_ex/rs_fec"
+            ]
+          },
+          "cmac_control_ex_gt_trans_debug": {
+            "interface_ports": [
+              "cmac_control_ex/gt_trans_debug",
+              "cmac/gt_trans_debug"
             ]
           },
           "cmac_stat_rx": {
@@ -4019,6 +4031,29 @@
           }
         }
       },
+      "qsfp_pins": {
+        "vlnv": "xilinx.com:module_ref:qsfp_pins:1.0",
+        "xci_name": "top_level_qsfp_pins_0_0",
+        "xci_path": "ip/top_level_qsfp_pins_0_0/top_level_qsfp_pins_0_0.xci",
+        "inst_hier_path": "qsfp_pins",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "qsfp_pins",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "qsfp_rst_l": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "qsfp_lp": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
       "axi_revision": {
         "vlnv": "xilinx.com:module_ref:axi_revision:1.0",
         "xci_name": "top_level_axi_revision_0_0",
@@ -4274,29 +4309,6 @@
                 "value_src": "constant"
               }
             }
-          }
-        }
-      },
-      "qsfp_pins": {
-        "vlnv": "xilinx.com:module_ref:qsfp_pins:1.0",
-        "xci_name": "top_level_qsfp_pins_0_0",
-        "xci_path": "ip/top_level_qsfp_pins_0_0/top_level_qsfp_pins_0_0.xci",
-        "inst_hier_path": "qsfp_pins",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "qsfp_pins",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "qsfp_rst_l": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "qsfp_lp": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
           }
         }
       }
