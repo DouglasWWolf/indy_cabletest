@@ -9,6 +9,11 @@
 #===============================================================================
 
 #
+# Presume the clocks have 300ps of jitter to force place&route to allow more margin on timing
+#
+set_system_jitter 0.300
+
+#
 # 200 Mhz init clock
 #
 set_property -dict {PACKAGE_PIN G17  IOSTANDARD LVCMOS18} [get_ports init_clk]

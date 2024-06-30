@@ -26,6 +26,8 @@ preplace inst cabletest -pg 1 -lvl 2 -x 450 -y 450 -swap {36 1 2 3 4 5 6 7 8 9 1
 preplace inst cmac_cdc -pg 1 -lvl 4 -x 1150 -y 70 -swap {21 1 2 3 4 5 6 14 8 9 10 11 12 13 0 15 16 17 18 19 20 7 22 23 24 25 26 27 35 29 30 31 32 33 34 42 36 37 38 39 40 41 28 43 44 45 46 47 48 49 50 51 52 53 54 55 65 64 61 62 59 58 63 60 57 56} -defaultsOSRD -pinDir cmac0_rx right -pinY cmac0_rx 290R -pinDir cmac0_tx right -pinY cmac0_tx 270R -pinDir cmac1_rx right -pinY cmac1_rx 0R -pinDir cmac1_tx right -pinY cmac1_tx 20R -pinDir user0_rx left -pinY user0_rx 400L -pinDir user0_tx left -pinY user0_tx 420L -pinDir user1_rx left -pinY user1_rx 380L -pinDir user1_tx left -pinY user1_tx 440L -pinDir user_clk left -pinY user_clk 520L -pinDir user_resetn left -pinY user_resetn 500L -pinDir cmac0_clk right -pinY cmac0_clk 370R -pinDir cmac0_resetn right -pinY cmac0_resetn 390R -pinDir cmac1_clk right -pinY cmac1_clk 330R -pinDir cmac1_resetn right -pinY cmac1_resetn 310R -pinDir cmac0_aligned right -pinY cmac0_aligned 520R -pinDir cmac1_aligned right -pinY cmac1_aligned 350R -pinDir user0_aligned left -pinY user0_aligned 480L -pinDir user1_aligned left -pinY user1_aligned 460L
 preplace inst qsfp_pins -pg 1 -lvl 5 -x 1570 -y 650 -defaultsOSRD -pinBusDir qsfp_rst_l right -pinBusY qsfp_rst_l 0R -pinBusDir qsfp_lp right -pinBusY qsfp_lp 20R
 preplace inst axi_revision -pg 1 -lvl 2 -x 450 -y 1040 -defaultsOSRD -pinDir S_AXI right -pinY S_AXI 0R -pinDir AXI_ACLK left -pinY AXI_ACLK 0L -pinDir AXI_ARESETN left -pinY AXI_ARESETN 20L
+preplace netloc cabletest_CMAC_TXDIFF 1 2 3 720J 670 NJ 670 1380
+preplace netloc cabletest_CMAC_TXPOST 1 2 3 700J 650 NJ 650 1340
 preplace netloc cabletest_CMAC_TXPRE 1 2 3 680J 630 980J 690 1420
 preplace netloc cabletest_RSFEC_ENABLE 1 2 3 580 10 NJ 10 1360J
 preplace netloc cabletest_resetn_out 1 2 3 640J 610 1000J 710 1440
@@ -42,8 +44,6 @@ preplace netloc qsfp_pins_qsfp_lp 1 5 1 NJ 670
 preplace netloc qsfp_pins_qsfp_rst_l 1 5 1 NJ 650
 preplace netloc source_200Mhz_clk 1 1 3 320 980 740 690 960
 preplace netloc source_200Mhz_resetn 1 1 2 300 390 660
-preplace netloc cabletest_CMAC_TXPOST 1 2 3 700J 650 NJ 650 1340
-preplace netloc cabletest_CMAC_TXDIFF 1 2 3 720J 670 NJ 670 1380
 preplace netloc AXIS_IN_0_1 1 2 2 NJ 470 NJ
 preplace netloc AXIS_IN_1_1 1 2 2 NJ 450 NJ
 preplace netloc cabletest_AXIS_OUT_0 1 2 2 NJ 490 NJ
