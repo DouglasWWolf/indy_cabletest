@@ -65,8 +65,8 @@ preplace netloc xdma_0_pcie_mgt 1 0 1 NJ 960
 levelinfo -pg 1 0 160 450 850 1150 1570 1740
 pagesize -pg 1 -db -bbox -sgen -130 0 1900 1140
 ",
-   "No Loops_ScaleFactor":"0.594447",
-   "No Loops_TopLeft":"-126,-7",
+   "No Loops_ScaleFactor":"0.6",
+   "No Loops_TopLeft":"-328,0",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD

@@ -1,0 +1,47 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-285,-184",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXIS_TX -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port M_AXIS_TX -pg 1 -lvl 3 -x 480 -y 100 -defaultsOSRD
+preplace port M_AXIS_RX -pg 1 -lvl 3 -x 480 -y 360 -defaultsOSRD
+preplace port S_AXIS_RX -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace inst tx_register_slice -pg 1 -lvl 1 -x 140 -y 60 -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 0L -pinDir M_AXIS right -pinY M_AXIS 40R -pinDir aclk left -pinY aclk 20L -pinDir aresetn left -pinY aresetn 40L
+preplace inst rx_register_slice -pg 1 -lvl 1 -x 140 -y 200 -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 0L -pinDir M_AXIS right -pinY M_AXIS 40R -pinDir aclk left -pinY aclk 20L -pinDir aresetn left -pinY aresetn 40L
+preplace inst system_ila -pg 1 -lvl 2 -x 360 -y 160 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 14 13} -defaultsOSRD -pinDir SLOT_0_AXIS left -pinY SLOT_0_AXIS 0L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 80L -pinDir clk left -pinY clk 140L -pinDir resetn left -pinY resetn 100L
+preplace netloc clk_1 1 0 2 20 300 NJ
+preplace netloc S_AXIS_TX_1 1 0 1 NJ 60
+preplace netloc tx_register_slice_M_AXIS 1 1 2 250 100 NJ
+preplace netloc rx_register_slice_M_AXIS 1 1 2 250 360 NJ
+preplace netloc S_AXIS_RX_1 1 0 1 NJ 200
+levelinfo -pg 1 0 140 360 480
+pagesize -pg 1 -db -bbox -sgen -130 0 610 380
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-485,-152",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXIS_TX -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port M_AXIS_TX -pg 1 -lvl 3 -x 880 -y 220 -defaultsOSRD
+preplace port M_AXIS_RX -pg 1 -lvl 3 -x 880 -y 80 -defaultsOSRD
+preplace port S_AXIS_RX -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace inst tx_register_slice -pg 1 -lvl 1 -x 340 -y 220 -defaultsOSRD
+preplace inst rx_register_slice -pg 1 -lvl 1 -x 340 -y 80 -defaultsOSRD
+preplace inst system_ila -pg 1 -lvl 2 -x 760 -y 120 -defaultsOSRD
+preplace netloc clk_1 1 0 1 20 80n
+preplace netloc S_AXIS_TX_1 1 0 1 NJ 200
+preplace netloc tx_register_slice_M_AXIS 1 1 2 450J 220 N
+preplace netloc rx_register_slice_M_AXIS 1 1 2 450J 30 860
+preplace netloc S_AXIS_RX_1 1 0 1 NJ 60
+levelinfo -pg 1 0 340 760 880
+pagesize -pg 1 -db -bbox -sgen -130 -140 1010 440
+"
+}
+
